@@ -41,7 +41,7 @@ namespace hoangdhph31492_Csharp3_BT1
             foreach (var x in _respo.GetXeMays(input))
             {
 
-                dtgXe.Rows.Add(x.Id, stt++, x.Ten, x.Mt, x.Sl, x.Gia, _service.GetTenLoai((Guid)x.IdLsp));
+                dtgXe.Rows.Add(x.Id, stt++, x.Ten, x.Mt, x.Sl, x.Gia,x.IdLsp!=null? _respo.GetLoaiXe((Guid)x.IdLsp).Ten:"Hangf giả");
             }
         }
 
